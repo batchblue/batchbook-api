@@ -1,7 +1,7 @@
 Data Reference
 ==============
 
-Person
+Person XML
 ------
 
 ``` xml
@@ -13,49 +13,23 @@ Person
   <middle-name>M</middle-name>
   <last-name>Krause</last-name>
   <emails type="array">
-    <email>
-      <id type="integer">49</id>
-      <address>ekrause@batchblue.com</address>
-      <label>work</label>
-    </email>
+    ...
   </emails>
   <phones type="array">
-    <phone>
-      <id type="integer">48</id>
-      <number>401 867-5309</number>
-      <label>work</label>
-    </phone>
+    ...
   </phones>
   <websites type="array">
-    <website>
-      <id type="integer">27</id>
-      <address>http://batchbook.com</address>
-      <label>work</label>
-    </website>
+    ...
   </websites>
   <addresses type="array">
-    <address>
-      <id type="integer">27</id>
-      <address-1>171 Chestnut St</address-1>
-      <address-2></address-2>
-      <city>Providence</city>
-      <state>RI</state>
-      <postal-code>02903</postal-code>
-      <country>United States</country>
-      <label>work</label>
-    </address>
+    ...
   </addresses>
   <tags type="array">
-    <tag>
-      <id type="integer">6</id>
-      <name>awesome</name>
-    </tag>
-    <tag>
-      <id type="integer">7</id>
-      <name>dev</name>
-    </tag>
+    ...
   </tags>
-  <comments type="array"/>
+  <comments type="array">
+    ...
+  </comments>
   <company-affiliations type="array">
     <company-affiliation>
       <id type="integer">3</id>
@@ -69,6 +43,8 @@ Person
 </person>
 ```
 
+Person json
+-----------
 ```json
 {"person":
   {"id":32,
@@ -78,45 +54,205 @@ Person
   "middle_name":"M",
   "last_name":"Krause",
   "emails":[
-    {"id":49,
-    "address":"ekrause@batchblue.com",
-    "label":"work"
-    }],
-  "phones":[
-    {"id":48,
-    "number":"401 867-5309",
-    "label":"work"
-    }],
-  "websites":[
-    {"id":27,
-    "address":"http://batchbook.com",
-    "label":"work"
-    }],
-  "addresses":[
-    {"id":27,
-    "address_1":"171 Chestnut St",
-    "address_2":"",
-    "city":"Providence",
-    "state":"RI",
-    "postal_code":"02903",
-    "country":"United States",
-    "label":"work"
-    }],
-  "tags":[
-    {"id":6,
-    "name":"awesome"
-    },
-    {"id":7,
-    "name":"dev"}
+    ...
     ],
-  "comments":[],
+  "phones":[
+      ...
+    ],
+  "websites":[
+      ...
+    ],
+  "addresses":[
+      ...
+    ],
+  "tags":[
+      ...
+    ],
+  "comments":[
+      ...
+    ],
   "company_affiliations":[
     {"id":3,
     "company_id":33,
     "current":true,
     "job_title":"Director of Engineering"
     }],
-  "cf_records":[],
+  "cf_records":[
+    ...
+  ],
   "etag":"1e6729bb76c8be91038dc8e13d3bd1e6"}
 }
 ```
+
+Company XML
+-----------
+``` xml
+
+<company>
+  <id type="integer">33</id>
+  <about nil="true"></about>
+  <name>Batchbook</name>
+  <emails type="array">
+    ...
+  </emails>
+  <phones type="array">
+    ...
+  </phones>
+  <websites type="array">
+    ...
+  </websites>
+  <addresses type="array">
+    ...
+  </addresses>
+  <tags type="array">
+    ...
+  </tags>
+  <comments type="array">
+    ...
+  </comments>
+  <cf-records type="array">
+    ...
+  </cf-records>
+  <etag>3d8a21bf5fca62a75ddf53dab9c68479</etag>
+</company>
+
+```
+
+Company JSON
+-----------
+``` json
+{"company":
+  {
+    "id":33,
+    "about":null,
+    "name":"Batchbook",
+    "emails":[
+      ...
+    ],
+    "phones":[
+      ...
+    ],
+    "websites":[
+      ...
+    ],
+    "addresses":[
+      ...
+    ],
+    "tags":[
+      ...
+    ],
+    "comments":[
+      ...
+    ],
+    "cf_records":[
+      ...
+    ],
+    "etag":"3d8a21bf5fca62a75ddf53dab9c68479"
+  }
+}
+
+```
+
+
+Email XML
+---------
+``` xml
+
+```
+
+Email JSON
+---------
+``` json
+
+```
+
+Website XML
+---------
+``` xml
+
+```
+
+Website JSON
+---------
+``` json
+
+```
+
+Address XML
+---------
+``` xml
+
+```
+
+Address JSON
+---------
+``` json
+
+```
+
+Phone XML
+---------
+``` xml
+
+```
+
+Phone JSON
+---------
+``` json
+
+```
+
+Custom Field Definition XML
+---------
+``` xml
+
+```
+
+Custom Field Definition JSON
+---------
+``` json
+
+```
+
+Custom Field Set XML
+---------
+``` xml
+
+```
+
+Custom Field Set JSON
+---------
+``` json
+
+```
+
+Tag XML
+---------
+``` xml
+
+```
+
+Tag JSON
+---------
+``` json
+
+```
+
+Comment XML
+-----
+``` xml
+
+```
+
+Comment JSON
+-----
+``` json
+
+```
+
+
+
+
+
+
+
