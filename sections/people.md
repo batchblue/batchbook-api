@@ -177,7 +177,7 @@ Create
       "current":true,
       "job_title":"Director of Engineering"
     }],
-  "cf_records":
+  "cf_records":[
     {
       "custom_field_set_id":46,
       "custom_field_values":[
@@ -219,4 +219,98 @@ Create
 Update
 -----
 
-* `PUT /api/v1/#{id}.xml or json
+* `PUT /api/v1/people/#{id}.xml or json
+
+Works just like create.  For nested objects without an id, it will create the nested email/webite/etc.  If the nested record contains an id, it will update.  To destroy a nested record, pass in a key of "_destroy" with a value of 1, "1", or true along with the id.  To destroy a tag, just pass "_destroy" with the name of the tag. 
+
+**Request:**
+
+```xml
+<person>
+  <id type="integer">123</id>
+  <about>All around cool guy.</about>
+  <prefix>Mr.</prefix>
+  <first-name>Eric</first-name>
+  <middle-name>M</middle-name>
+  <last-name>Krause</last-name>
+  <emails type="array">
+    <email>
+      <address>create@example.com</address>
+      <label>home</label>
+    </email>
+    <email>
+      <id type="integer">1</id>
+      <address>update@example.com</address>
+      <label>work</label>
+    </email>
+    <email>
+      <id type="integer">2</id>
+      <address>delete@example.com</address>
+      <label>work</label>
+      <_destroy type="string">"1"</_destroy>
+    </email>
+  </emails>
+  <phones type="array"/>
+  <websites type="array"/>
+  <addresses type="array"/>
+  <tags type="array">
+    <tag>
+      <name>awesome</name>
+    </tag>
+    <tag>
+      <name>not awesome</name>
+      <_destroy type="integer">1</_destroy>
+    </tag>
+  </tags>
+  <comments type="array"/>
+  <company-affiliations type="array"/>
+  <cf-records type="array"/>
+</person>
+```
+
+```json
+{"person":
+  {"id":32,
+  "about":"All around cool guy.",
+  "prefix":"Mr.",
+  "first_name":"Eric",
+  "middle_name":"M",
+  "last_name":"Krause",
+  "emails":[
+    {
+      "address":"create@example.com",
+      "label":"work"
+    },
+    {
+      "id":1,
+      "address":"update@example.com",
+      "label":"home"
+    },
+    {
+      "id":2,
+      "_destroy":1,
+      "address":"destroy@example.com"
+    }],
+  "phones":[],
+  "addresses":[],
+  "websites":[],
+  "tags":[],
+  "comments":[],
+  "company_affiliations":[],
+  "cf_records":[]
+  }
+}
+```
+
+**Response:**
+
+    Status: 200 OK
+
+Destroy person
+--------------
+
+* `DELETE /api/v1/people/#{id}.xml` destroys the person at the referenced URL.
+
+**Response:**
+
+    Status: 200 OK
