@@ -653,3 +653,28 @@ Roles JSON
 }
 ```
 
+Users XML
+----
+``` xml
+<user>
+  <id type="integer">8</id>
+  <first-name>Eric</first-name>
+  <last-name>Krause</last-name>
+  <email>ekrause@batchblue.com</email>
+  <role-id type="integer">3</role-id>
+</user>
+```
+
+Users JSON
+----
+
+``` json
+{
+  "id":8,
+  "first_name":"Eric",
+  "last_name":"Krause",
+  "email":"ekrause@batchblue.com",
+  "role_id":3
+}
+```
+
