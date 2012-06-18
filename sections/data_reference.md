@@ -264,7 +264,6 @@ Custom Field Set JSON
     ]
   }
 }
-
 ```
 
 Custom Field Definition Attribute
