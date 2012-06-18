@@ -85,7 +85,6 @@ Person json
 Company XML
 -----------
 ``` xml
-
 <company>
   <id type="integer">33</id>
   <about nil="true">A great company to work for.</about>
@@ -112,7 +111,6 @@ Company XML
     ...
   </cf-records>
 </company>
-
 ```
 
 Company JSON
@@ -147,7 +145,6 @@ Company JSON
     ]
   }
 }
-
 ```
 
 Email XML
@@ -251,7 +248,6 @@ Custom Field Set XML
     ...
   </custom-field-definitions-attributes>
 </custom-field-set>
-
 ```
 
 Custom Field Set JSON
@@ -332,8 +328,6 @@ OR
   "position":22
 }
 ```
-
-
 
 Custom Field Record XML
 ----
@@ -599,20 +593,15 @@ Tag XML
   <id type="integer">6</id>
   <name>awesome</name>
 </tag>
-
 ```
 
 Tag JSON
 ---------
 ``` json
 {
-    "tag":
-  {
-    "id":6,
-    "name":"awesome"
-  }
+  "id":6,
+  "name":"awesome"
 }
-
 ```
 
 Comment XML
