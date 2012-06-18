@@ -285,6 +285,7 @@ Custom Field Definition Attribute
   <position type="integer">3</position>
 </custom-field-definitions-attribute>
 
+OR
 
 <custom-field-definitions-attribute>
   <id type="integer">217</id>
@@ -317,6 +318,7 @@ Custom Field Definition Attribute
   "position":3
 }
 
+OR
 
 {
   "id":217,
