@@ -34,6 +34,9 @@ Please note that the person element is skipped when part of the array.
       "id":1157,
       "about":null,
       ...
+    },
+    {
+      ...
     }
   ]
 }
@@ -197,7 +200,7 @@ Create
 **Response:**
 
     Status: 201 Created
-    Location: https://your_account.batchbook.com/api/v1/people/the_new_id
+    Location: https://your_account.batchbook.com/api/v1/people/the_new_id.{json or xml}
 
 ```xml
 <person>
@@ -221,7 +224,7 @@ Update
 
 * `PUT /api/v1/people/#{id}.xml or json
 
-Works just like create.  For nested objects without an id, it will create the nested email/webite/etc.  If the nested record contains an id, it will update.  To destroy a nested record, pass in a key of "_destroy" with a value of 1, "1", or true along with the id.  To destroy a tag, just pass "_destroy" with the name of the tag. 
+Works just like create.  For nested objects without an id, it will create the nested email/webite/etc.  If the nested record contains an id, it will update.  To destroy a nested record, pass in a key of "_destroy" with a value of 1, "1", or true along with the id.  To destroy a tag, just pass "_destroy" with the name of the tag.
 
 **Request:**
 
