@@ -1,3 +1,7 @@
+WORK IN PROGRESS:
+================
+  This documentation is under development. Please submit an issue (or contact Batchbook) with specific questions that you do not see addressed here. More docs coming soon!
+
 Batchbook API
 =============
 
