@@ -209,7 +209,194 @@ If no Custom Field Sets are found an empty `{"custom_field_sets":[]}` or `<custo
 ```json
 {
   "custom_field_sets":[
-    {"custom_field_set":{"id":49,"name":"everything test2","description":"An example for every Custom Field Type","custom_field_definitions_attributes":[{"id":240,"name":"Text Short Field","type":"Text","options":{"subfields":[],"primary":1},"position":3},{"id":241,"name":"Text Long Field","type":"Text","options":{"subfields":[],"primary":2},"position":4},{"id":242,"name":"Number Field","type":"Number","options":{"subfields":[]},"position":5},{"id":243,"name":"Yes Or No Field","type":"Boolean","options":{"subfields":[]},"position":6},{"id":244,"name":"Phone Field","type":"Phone","options":{"subfields":[]},"position":7},{"id":245,"name":"Email Field","type":"Email","options":{"subfields":[]},"position":8},{"id":246,"name":"Website Field","type":"Url","options":{"subfields":[]},"position":9},{"id":247,"name":"Date Time Field","type":"Date","options":{"subfields":[],"primary":1},"position":10},{"id":248,"name":"Date Field","type":"Date","options":{"subfields":[],"primary":2},"position":11},{"id":249,"name":"Recurring Weekly Date","type":"RecurringDate","options":{"subfields":[],"primary":1},"position":12},{"id":250,"name":"Recurring Yearly Date","type":"RecurringDate","options":{"subfields":[],"primary":2},"position":13},{"id":251,"name":"Dropdown One Choice","type":"MultipleChoice","options":{"subfields":["option 1","option 2"],"primary":"1"},"position":20},{"id":252,"name":"Radio Once Choice","type":"MultipleChoice","options":{"subfields":["option 1","option 2"],"primary":"2"},"position":21},{"id":253,"name":"Checkboxes Multiple Choices","type":"MultipleChoice","options":{"subfields":["option 1","option 2","option 3"],"primary":"3"},"position":22},{"id":254,"name":"Currency Field","type":"Currency","options":{"subfields":[],"primary":1},"position":23},{"id":255,"name":"Assigned To Field","type":"AssignedTo","options":{"subfields":[]},"position":24},{"id":256,"name":"Decimal","type":"Number","options":{"subfields":[]},"position":25}]}}
+    {
+      "custom_field_set":
+        {
+          "id":49,
+          "name":"everything test2",
+          "description":"An example for every Custom Field Type",
+          "custom_field_definitions_attributes":[
+            {
+              "id":240,
+              "name":"Text Short Field",
+              "type":"Text",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":1
+                },
+              "position":3
+            },
+            {
+              "id":241,
+              "name":"Text Long Field",
+              "type":"Text",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":2
+                },
+              "position":4
+            },
+            {
+              "id":242,
+              "name":"Number Field",
+              "type":"Number",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":5},
+            {
+              "id":243,
+              "name":"Yes Or No Field",
+              "type":"Boolean",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":6
+            },
+            {
+              "id":244,
+              "name":"Phone Field",
+              "type":"Phone",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":7
+            },
+            {
+              "id":245,
+              "name":"Email Field",
+              "type":"Email",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":8
+            },
+            {
+              "id":246,
+              "name":"Website Field",
+              "type":"Url",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":9
+            },
+            {
+              "id":247,
+              "name":"Date Time Field",
+              "type":"Date",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":1
+                },
+              "position":10
+            },
+            {
+              "id":248,
+              "name":"Date Field",
+              "type":"Date",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":2
+                },
+              "position":11
+            },
+            {
+              "id":249,
+              "name":"Recurring Weekly Date",
+              "type":"RecurringDate",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":1
+                },
+              "position":12
+            },
+            {
+              "id":250,
+              "name":"Recurring Yearly Date",
+              "type":"RecurringDate",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":2
+                },
+              "position":13
+            },
+            {
+              "id":251,
+              "name":"Dropdown One Choice",
+              "type":"MultipleChoice",
+              "options":
+                {
+                  "subfields":["option 1","option 2"],
+                  "primary":"1"
+                },
+              "position":20
+            },
+            {
+              "id":252,
+              "name":"Radio Once Choice",
+              "type":"MultipleChoice",
+              "options":
+                {
+                  "subfields":["option 1","option 2"],
+                  "primary":"2"
+                },
+              "position":21
+            },
+            {
+              "id":253,
+              "name":"Checkboxes Multiple Choices",
+              "type":"MultipleChoice",
+              "options":
+                {
+                  "subfields":["option 1","option 2","option 3"],
+                  "primary":"3"
+                },
+              "position":22
+            },
+            {
+              "id":254,
+              "name":"Currency Field",
+              "type":"Currency",
+              "options":
+                {
+                  "subfields":[],
+                  "primary":1
+                },
+              "position":23},
+            {
+              "id":255,
+              "name":"Assigned To Field",
+              "type":"AssignedTo",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":24
+            },
+            {
+              "id":256,
+              "name":"Decimal",
+              "type":"Number",
+              "options":
+                {
+                  "subfields":[]
+                },
+              "position":25
+            }
+          ]
+        }
+      }
     ]
   }
 ```
