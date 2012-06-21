@@ -10,6 +10,8 @@ Index
 * `GET /api/v1/companies.xml or .json` returns a collection of companies.  Limited to 25
 * `GET /api/v1/companies.xml?page=2` returns the next collection of companies.  Limited to 25
 
+If there is particular search action that would make things easier, please let us know at help@batchblue.com
+
 If no companies are found an empty `{"companies":[]}` or `<companies type="array"/>` is returned
 
 **Response:**
@@ -246,7 +248,6 @@ Works just like create.  For nested objects without an id, it will create the ne
     </tag>
   </tags>
   <comments type="array"/>
-  <company-affiliations type="array"/>
   <cf-records type="array"/>
 </company>
 ```

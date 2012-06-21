@@ -10,6 +10,8 @@ Index
 * `GET /api/v1/people.xml or .json` returns a collection of people.  Limited to 25
 * `GET /api/v1/people.xml?page=2` returns the next collection of people.  Limited to 25
 
+If there is particular search action that would make things easier, please let us know at help@batchblue.com
+
 If no people are found an empty `{"people":[]}` or `<people type="array"/>` is returned
 
 **Response:**
