@@ -429,55 +429,55 @@ options: A hash consisting of two fields.  "primary", and "subfields".
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#custom_definition_attribute-json)
 
-  Primary options for Text:
-    1   => 'Short',
-    2   => 'Long'
-  Primary options for Date:
-    1 => 'Date/Time',
-    2 => 'Date'
-  Primary options for RecurringDate:
-    1 => 'Weekly',
-    2 => 'Yearly',
-    3 => 'Monthly'
-  Primary options for Currency:
-    1   => 'USD',
-    2   => 'CAD',
-    3   => 'DKK',
-    4   => 'EUR',
-    5   => 'GBP',
-    6   => 'JPY',
-    7   => 'KRW',
-    8   => 'NOK',
-    9   => 'MXN',
-    10  => 'AUD',
-    11  => 'NZD',
-    12  => 'PLN',
-    13  => 'SGD',
-    14  => 'HKD',
-    15  => 'RUB',
-    16  => 'AED',
-    17  => 'CHF',
-    18  => 'PKR',
-    19  => 'CZK',
-    20  => 'INR',
-    21  => 'IDR',
-    22  => 'CNY',
-    23  => 'ZAR',
-    24  => 'PHP',
-    25  => 'BRL',
-    26  => 'SEK',
-    27  => 'QAR',
-    28  => 'ILS',
-    29  => 'HRK',
-    30  => 'BHD',
-    31  => 'HUF',
-    32  => 'THB',
-    33  => 'KWD'
+*  Primary options for Text:
+  *  1   => 'Short',
+  *  2   => 'Long'
+*  Primary options for Date:
+  *  1 => 'Date/Time',
+  *  2 => 'Date'
+*  Primary options for RecurringDate:
+  *  1 => 'Weekly',
+  *  2 => 'Yearly',
+  *  3 => 'Monthly'
+*  Primary options for Currency:
+  *  1   => 'USD',
+  *  2   => 'CAD',
+  *  3   => 'DKK',
+  *  4   => 'EUR',
+  *  5   => 'GBP',
+  *  6   => 'JPY',
+  *  7   => 'KRW',
+  *  8   => 'NOK',
+  *  9   => 'MXN',
+  *  10  => 'AUD',
+  *  11  => 'NZD',
+  *  12  => 'PLN',
+  *  13  => 'SGD',
+  *  14  => 'HKD',
+  *  15  => 'RUB',
+  *  16  => 'AED',
+  *  17  => 'CHF',
+  *  18  => 'PKR',
+  *  19  => 'CZK',
+  *  20  => 'INR',
+  *  21  => 'IDR',
+  *  22  => 'CNY',
+  *  23  => 'ZAR',
+  *  24  => 'PHP',
+  *  25  => 'BRL',
+  *  26  => 'SEK',
+  *  27  => 'QAR',
+  *  28  => 'ILS',
+  *  29  => 'HRK',
+  *  30  => 'BHD',
+  *  31  => 'HUF',
+  *  32  => 'THB',
+  *  33  => 'KWD'
 
-  Primary options for MultipleChoice:
-    1 => 'Dropdown (one choice)',
-    2 => 'Radio Buttons (one choice)',
-    3 => 'Checkboxes (multiple choices)'
+*  Primary options for MultipleChoice:
+  *  1 => 'Dropdown (one choice)',
+  *  2 => 'Radio Buttons (one choice)',
+  *  3 => 'Checkboxes (multiple choices)'
 
 **Request:**
 
