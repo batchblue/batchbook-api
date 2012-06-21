@@ -266,7 +266,7 @@ Custom Field Set JSON
 }
 ```
 
-Custom Field Definition Attribute
+Custom Field Definition Attribute XML
 -----
 ``` xml
 <custom-field-definitions-attribute>
@@ -298,7 +298,7 @@ OR
 </custom-field-definitions-attribute>
 ```
 
-Custom Field Definition Attribute
+Custom Field Definition Attribute JSON
 -----
 ``` json
 {
