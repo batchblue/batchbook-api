@@ -25,7 +25,7 @@ Api Wrappers
 Api Test Account
 ----------------
 
-If you would like to quickly test some code against the api, you can use our open apitest account at apitest.batchbook.com.  If you would like a personal account to test your integration against please write in to help@batchlue.com.  If you'd like to see how the data is rendering in batchbook you can go to https://apitest.batchbook.com/?auth_token=mXZ8syJrMYHzcxf8j83D
+If you would like to quickly test some code against the api, you can use our open apitest account at apitest.batchbook.com.  If you would like a personal account to test your integration against please write in to help@batchblue.com.  If you'd like to see how the data is rendering in batchbook you can go to https://apitest.batchbook.com/?auth_token=mXZ8syJrMYHzcxf8j83D
 
 The apitest account has 4 users to use for testing.
 
