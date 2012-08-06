@@ -131,6 +131,8 @@ Create
       </custom-field-values>
     </cf-record>
   </cf-records>
+  <created-at type="datetime">2012-06-19T14:32:20-04:00</created-at>
+  <updated-at type="datetime">2012-06-21T17:15:36-04:00</updated-at>
 </person>
 ```
 
@@ -194,7 +196,9 @@ Create
         "custom_field_definition_id":199,
         "text_value":"long"
       }]
-    }]
+    }],
+  "created_at":"2012-06-19T14:32:20-04:00",
+  "updated_at":"2012-06-21T17:15:36-04:00"
   }
 }
 ```

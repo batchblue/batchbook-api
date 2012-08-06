@@ -39,6 +39,8 @@ Person XML
     </company-affiliation>
   </company-affiliations>
   <cf-records type="array"/>
+  <created-at type="datetime">2012-06-19T14:32:20-04:00</created-at>
+  <updated-at type="datetime">2012-06-21T17:15:36-04:00</updated-at>
 </person>
 ```
 
@@ -78,7 +80,9 @@ Person json
     }],
   "cf_records":[
     ...
-  ]
+  ],
+  "created_at":"2012-06-19T14:32:20-04:00",
+  "updated_at":"2012-06-21T17:15:36-04:00"
 }
 ```
 
@@ -110,6 +114,8 @@ Company XML
   <cf-records type="array">
     ...
   </cf-records>
+  <created-at type="datetime">2012-06-19T14:32:20-04:00</created-at>
+  <updated-at type="datetime">2012-06-21T17:15:36-04:00</updated-at>
 </company>
 ```
 
@@ -142,7 +148,9 @@ Company JSON
     ],
     "cf_records":[
       ...
-    ]
+    ],
+    "created_at":"2012-06-19T14:32:20-04:00",
+    "updated_at":"2012-06-21T17:15:36-04:00"
   }
 }
 ```
