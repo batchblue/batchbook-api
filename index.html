@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Batchbook-api by batchblue</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Batchbook-api</h1>
+        <p>Official API documentation for Batchbook</p>
+
+        <p class="view"><a href="https://github.com/batchblue/batchbook-api">View the Project on GitHub <small>batchblue/batchbook-api</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/batchblue/batchbook-api/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/batchblue/batchbook-api/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/batchblue/batchbook-api">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Batchbook API</h1>
+
+<p>The BB2 API is a RESTful interface for accessing and modifying your account.It supports both XML and JSON and a ruby library will be provided to help build client functionality.  The API is currently under construction and the following is only a subset of what will eventually be available. Please submit an issue (or contact Batchbook) with specific questions that you do not see addressed here.</p>
+
+<h2>Endpoints</h2>
+
+<ul>
+<li><a href="https://github.com/batchblue/batchbook-api/blob/master/sections/people.md">People</a></li>
+<li><a href="https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md">Companies</a></li>
+<li><a href="https://github.com/batchblue/batchbook-api/blob/master/sections/custom_fields.md">Custom Fields</a></li>
+<li><a href="https://github.com/batchblue/batchbook-api/blob/master/sections/users.md">Users</a></li>
+<li><a href="https://github.com/batchblue/batchbook-api/blob/master/sections/roles.md">Roles</a></li>
+</ul><h2>Authentication</h2>
+
+<p>Authentication at launch will be using token authentication.  The api_key for the user will be found at https://account_name.batchbook.com/preferences The api_key must be passed as a query parameter with the key "auth_token".  For example. <a href="https://apitest.batchbook.com/api/v1/people.json?auth_token=GR5doLv88FrnLyLGIwok">https://apitest.batchbook.com/api/v1/people.json?auth_token=GR5doLv88FrnLyLGIwok</a></p>
+
+<p>There has been some work done on implementing oauth2 but it isn't complete at launch.  If you feel this would make things easier for your integration please let us know.</p>
+
+<h2>Api Wrappers</h2>
+
+<ul>
+<li><a href="https://github.com/batchblue/batchbook">Ruby wrapper by batchblue</a></li>
+</ul><h2>Api Test Account</h2>
+
+<p>If you would like to quickly test some code against the api, you can use our open apitest account at apitest.batchbook.com.  If you would like a personal account to test your integration against please write in to <a href="mailto:help@batchblue.com">help@batchblue.com</a>.  If you'd like to see how the data is rendering in batchbook you can go to <a href="https://apitest.batchbook.com/?auth_token=mXZ8syJrMYHzcxf8j83D">https://apitest.batchbook.com/?auth_token=mXZ8syJrMYHzcxf8j83D</a></p>
+
+<p>The apitest account has 4 users to use for testing.</p>
+
+<p><a href="mailto:basic@batchblue.com">basic@batchblue.com</a>, api key is 6B8YOw9x1tnbKZuUeVkc
+  <a href="mailto:advanced@batchblue.com">advanced@batchblue.com</a>, GR5doLv88FrnLyLGIwok
+  <a href="mailto:admin@batchblue.com">admin@batchblue.com</a>,  mXZ8syJrMYHzcxf8j83D
+  <a href="mailto:owner@batchblue.com">owner@batchblue.com</a>, DGJFgqRAmxGRVnM9wtYq</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/batchblue">batchblue</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
