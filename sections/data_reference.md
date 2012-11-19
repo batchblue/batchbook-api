@@ -45,7 +45,7 @@ Person XML
 </person>
 ```
 
-Person json
+Person JSON
 -----------
 ```json
 {"person":
@@ -689,6 +689,115 @@ Users JSON
   "last_name":"Krause",
   "email":"ekrause@batchblue.com",
   "role_id":3
+}
+```
+
+Communication XML
+----
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<communication>
+    <id type="integer">5</id>
+    <title>Thanks for signing up for our service!</title>
+    <body>Just a quick note to thank you for signing up for our service.  If you have any questions, please feel free to contact John Smith.   He has been assigned to your account to help you get the most of your subscription. </body>
+    <date type="datetime">2012-10-26T15:41:00-04:00</date>
+    <type>email</type>
+    <created-at type="datetime">2012-10-26T15:44:29-04:00</created-at>
+    <updated-at type="datetime">2012-10-26T15:50:09-04:00</updated-at>
+    <tags type="array">
+        <tag>
+            <id type="integer">11</id>
+            <name>welcome</name>
+        </tag>
+    </tags>
+    <cf-records type="array">
+        <cf-record>
+            <id type="integer">10</id>
+            <custom-field-set-id type="integer">1</custom-field-set-id>
+            <custom-field-values type="array">
+                <custom-field-value>
+                    <id type="integer">1</id>
+                    <custom-field-definition-id type="integer">4</custom-field-definition-id>
+                    <text-value>Customer Purchased</text-value>
+                </custom-field-value>
+                <custom-field-value>
+                    <id type="integer">2</id>
+                    <custom-field-definition-id type="integer">5</custom-field-definition-id>
+                    <text-value>Account manager assigned</text-value>
+                </custom-field-value>
+            </custom-field-values>
+        </cf-record>
+    </cf-records>
+    <permissions type="array"/>
+    <participants type="array">
+        <participant>
+            <id type="integer">13</id>
+            <type>to</type>
+            <contact-id type="integer">32</contact-id>
+            <contact-name>Mickey McQuaide</contact-name>
+        </participant>
+        <participant>
+            <id type="integer">14</id>
+            <type>from</type>
+            <contact-id type="integer">1</contact-id>
+            <contact-name>Ray Anderson</contact-name>
+        </participant>
+    </participants>
+</communication>
+```
+
+Communication JSON
+----
+```json
+{
+    "communication": {
+        "id": 5,
+        "title": "Thanks for signing up for our service!",
+        "body": "Just a quick note to thank you for signing up for our service.  If you have any questions, please feel free to contact John Smith.   He has been assigned to your account to help you get the most of your subscription. ",
+        "date": "2012-10-26T15:41:00-04:00",
+        "type": "email",
+        "created_at": "2012-10-26T15:44:29-04:00",
+        "updated_at": "2012-10-26T15:48:27-04:00",
+        "tags": [
+            {
+                "id": 11,
+                "name": "welcome"
+            }
+        ],
+        "cf_records": [
+            {
+                "id": 10,
+                "custom_field_set_id": 1,
+                "custom_field_values": [
+                    {
+                        "id": 1,
+                        "custom_field_definition_id": 4,
+                        "text_value": "Customer Purchased"
+                    },
+                    {
+                        "id": 2,
+                        "custom_field_definition_id": 5,
+                        "text_value": "Account manager assigned"
+                    }
+                ]
+            }
+        ],
+        "permissions": [],
+        "participants": [
+            {
+                "id": 12,
+                "type": "from",
+                "contact_id": 1,
+                "contact_name": "Ray Anderson"
+            },
+            {
+                "id": 13,
+                "type": "to",
+                "contact_id": 32,
+                "contact_name": "Mickey McQuaide"
+            }
+        ]
+    }
 }
 ```
 
