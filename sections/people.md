@@ -1,6 +1,14 @@
 People
 =============
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#show)
+* [Create](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#create)
+* [Update](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#update)
+* [Destroy](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#destroy-person)
+
 [XML Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#person-xml)
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#person-json)

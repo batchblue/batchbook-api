@@ -1,6 +1,15 @@
 Companies
 =============
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#show)
+* [Create](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#create)
+* [Update](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#update)
+* [Destroy](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#destroy-company)
+
+
 [XML Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#company-xml)
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#company-json)
