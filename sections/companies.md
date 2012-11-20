@@ -90,18 +90,21 @@ Create
     <email>
       <address>bar@example.com</address>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </email>
   </emails>
   <phones type="array">
     <phone>
       <number>1 401 867 5309</number>
       <label>cell</label>
+      <primary type="boolean">true</primary>
     </phone>
   </phones>
   <websites type="array">
     <website>
       <address>http://batchblue.com</address>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </website>
   </websites>
   <addresses type="array">
@@ -113,6 +116,7 @@ Create
       <postal-code>02903</postal-code>
       <country>United States</country>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </address>
   </addresses>
   <tags type="array">
@@ -154,12 +158,14 @@ Create
   "emails":[
     {
       "address":"bar@example.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "phones":[
     {
       "number":"1 401 867 5309",
-      "label":"cell"
+      "label":"cell",
+      "primary": true
     }],
   "addresses":[
     {
@@ -169,12 +175,14 @@ Create
       "state":"RI",
       "postal_code":"02903",
       "country":"United States",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "websites":[
     {
       "address":"http://batchblue.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "tags":[
     {
@@ -244,11 +252,13 @@ Works just like create.  For nested objects without an id, it will create the ne
     <email>
       <address>create@example.com</address>
       <label>home</label>
+      <primary type="boolean">true</primary>
     </email>
     <email>
       <id type="integer">1</id>
       <address>update@example.com</address>
       <label>work</label>
+      <primary type="boolean">false</primary>
     </email>
     <email>
       <id type="integer">2</id>
@@ -282,12 +292,14 @@ Works just like create.  For nested objects without an id, it will create the ne
   "emails":[
     {
       "address":"create@example.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     },
     {
       "id":1,
       "address":"update@example.com",
-      "label":"home"
+      "label":"home",
+      "primary": false
     },
     {
       "id":2,
