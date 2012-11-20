@@ -12,6 +12,7 @@ Person XML
   <first-name>Eric</first-name>
   <middle-name>M</middle-name>
   <last-name>Krause</last-name>
+  <champion>true</champion>
   <emails type="array">
     ...
   </emails>
@@ -54,6 +55,7 @@ Person json
   "first_name":"Eric",
   "middle_name":"M",
   "last_name":"Krause",
+  "champion":true,
   "emails":[
       ...
     ],
@@ -157,46 +159,55 @@ Company JSON
 
 Email XML
 ---------
+Note: Only one primary email allowed.  If an email is passed in with primary = true, the other emails will be updated to remove the primary flag
 ``` xml
 <email>
   <id type="integer">25</id>
   <address>bar@example.com</address>
   <label>work</label>
+  <primary type="boolean">true</primary>
 </email>
 ```
 
 Email JSON
 ---------
+Note: Only one primary email allowed.  If an email is passed in with primary = true, the other emails will be updated to remove the primary flag
 ``` json
 {
   "id":25,
   "address":"bar@example.com",
-  "label":"work"
+  "label":"work",
+  "primary": true
 }
 ```
 
 Website XML
 ---------
+Note: Only one primary website allowed.  If an website is passed in with primary = true, the other websites will be updated to remove the primary flag
 ``` xml
 <website>
   <id type="integer">62</id>
   <address>http://batchblue.com</address>
   <label>work</label>
+  <primary type="boolean">true</primary>
 </website>
 ```
 
 Website JSON
 ---------
+Note: Only one primary website allowed.  If an website is passed in with primary = true, the other websites will be updated to remove the primary flag
 ``` json
 {
   "id":62,
   "address":"http://batchblue.com",
-  "label":"work"
+  "label":"work",
+  "primary": true
 }
 ```
 
 Address XML
 ---------
+Note: Only one primary address allowed.  If an address is passed in with primary = true, the other addresses will be updated to remove the primary flag
 ``` xml
 <address>
   <id type="integer">113</id>
@@ -207,11 +218,13 @@ Address XML
   <postal-code>02903</postal-code>
   <country>United States</country>
   <label>work</label>
+  <primary type="boolean">true</primary>
 </address>
 ```
 
 Address JSON
 ---------
+Note: Only one primary address allowed.  If an address is passed in with primary = true, the other addresses will be updated to remove the primary flag
 ``` json
 {
   "id":113,
@@ -221,27 +234,32 @@ Address JSON
   "state":"RI",
   "postal_code":"02903",
   "country":"United States",
-  "label":"work"
+  "label":"work",
+  "primary": true
 }
 ```
 
 Phone XML
 ---------
+Note: Only one primary phone allowed.  If an phone is passed in with primary = true, the other phones will be updated to remove the primary flag
 ``` xml
 <phone>
   <id type="integer">69</id>
   <number>1 401 867 5309</number>
   <label>cell</label>
+  <primary type="boolean">true</primary>
 </phone>
 ```
 
 Phone JSON
 ---------
+Note: Only one primary phone allowed.  If an phone is passed in with primary = true, the other phones will be updated to remove the primary flag
 ``` json
 {
   "id":69,
   "number":"1 401 867 5309",
-  "label":"cell"
+  "label":"cell",
+  "primary": true
 }
 ```
 

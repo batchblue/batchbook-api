@@ -1,14 +1,33 @@
 People
 =============
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#show)
+* [Create](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#create)
+* [Update](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#update)
+* [Destroy](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md#destroy-person)
+
 [XML Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#person-xml)
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#person-json)
 
 Index
 ----
-* `GET /api/v1/people.xml or .json` returns a collection of people.  Limited to 25
-* `GET /api/v1/people.xml?page=2` returns the next collection of people.  Limited to 25
+Each request is limited to 30 people returned.  To query the next collection, use the page parameter listed below.  Note: You can use multiple parameters in one query.  So email=joe.example.com&tags=awesome would return all people that have both the required email and tag.
+
+* `GET /api/v1/people.xml or .json` returns a collection of people.
+* `GET /api/v1/people.xml?page=2` returns the next collection of people.
+* `GET /api/v1/people.xml?email=joe.smith@example.com` returns the people who have the email address listed.  (This is an exact search.  So searching for @gmail won't work. If there is a request for this, file an issue please)
+* `GET /api/v1/people.xml?tags=awesome` returns the people who have the tag address listed.
+* `GET /api/v1/people.xml?name=Joe` returns all people who have "Joe" in their name. [Joe Smith, Joey Bag'ODonuts]   Note: This is effectively a LIKE query.
+* `GET /api/v1/people.xml?updated_since=2012-11-20T11:05:15-05:00` returns all people who have been updated since the time passed in.
+* `GET /api/v1/people.xml?updated_before=2012-11-20T11:05:15-05:00` returns all people who have been updated before the time passed in.
+* `GET /api/v1/people.xml?state=RI` Useful if you want to query all of the people who have an address in a particular state.
+* `GET /api/v1/people.xml?champion=true` returns a collection of your champions.  You can pass in 'false' to get a listing of people who are not champions.
+* `GET /api/v1/people.xml?company_name=Batchblue` returns a collection of people who are employees of 'Batchblue'
+* `GET /api/v1/people.xml?company_id=35` returns a collection of people who are employees of company with the id 35
 
 If there is particular search action that would make things easier, please let us know at help@batchblue.com
 
@@ -69,22 +88,26 @@ Create
   <first-name>Eric</first-name>
   <middle-name>M</middle-name>
   <last-name>Krause</last-name>
+  <champion>true</champion>
   <emails type="array">
     <email>
       <address>bar@example.com</address>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </email>
   </emails>
   <phones type="array">
     <phone>
       <number>1 401 867 5309</number>
       <label>cell</label>
+      <primary type="boolean">true</primary>
     </phone>
   </phones>
   <websites type="array">
     <website>
       <address>http://batchblue.com</address>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </website>
   </websites>
   <addresses type="array">
@@ -96,6 +119,7 @@ Create
       <postal-code>02903</postal-code>
       <country>United States</country>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </address>
   </addresses>
   <tags type="array">
@@ -144,15 +168,18 @@ Create
   "first_name":"Eric",
   "middle_name":"M",
   "last_name":"Krause",
+  "champion":true,
   "emails":[
     {
       "address":"bar@example.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "phones":[
     {
       "number":"1 401 867 5309",
-      "label":"cell"
+      "label":"cell",
+      "primary": true
     }],
   "addresses":[
     {
@@ -162,12 +189,14 @@ Create
       "state":"RI",
       "postal_code":"02903",
       "country":"United States",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "websites":[
     {
       "address":"http://batchblue.com",
-      "label":"work"
+      "label":"work",
+      "primary": false
     }],
   "tags":[
     {
@@ -242,15 +271,18 @@ Works just like create.  For nested objects without an id, it will create the ne
   <first-name>Eric</first-name>
   <middle-name>M</middle-name>
   <last-name>Krause</last-name>
+  <champion>false</champion>
   <emails type="array">
     <email>
       <address>create@example.com</address>
       <label>home</label>
+      <primary type="boolean">true</primary>
     </email>
     <email>
       <id type="integer">1</id>
       <address>update@example.com</address>
       <label>work</label>
+      <primary type="boolean">false</primary>
     </email>
     <email>
       <id type="integer">2</id>
@@ -288,12 +320,14 @@ Works just like create.  For nested objects without an id, it will create the ne
   "emails":[
     {
       "address":"create@example.com",
-      "label":"work"
+      "label":"work",
+      "primary":true
     },
     {
       "id":1,
       "address":"update@example.com",
-      "label":"home"
+      "label":"home",
+      "primary":false
     },
     {
       "id":2,

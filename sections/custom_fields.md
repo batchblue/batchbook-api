@@ -1,6 +1,12 @@
 Custom Fields
 =============
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/custom_fields.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/custom_fields.md#show)
+* [Create](https://github.com/batchblue/batchbook-api/blob/master/sections/custom_fields.md#create)
+
 Custom Fields are replacing SuperTags that were in Batchbook Classic.  Like SuperTags, they can be applied to every contact and store any data that you require.  Unlike SuperTags, they will no longer be a tag.  This was to facilitate the ability to add more than one instance of a Custom Field to a record.
 
 Custom Field Set
