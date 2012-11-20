@@ -16,8 +16,17 @@ Companies
 
 Index
 ----
-* `GET /api/v1/companies.xml or .json` returns a collection of companies.  Limited to 25
-* `GET /api/v1/companies.xml?page=2` returns the next collection of companies.  Limited to 25
+Each request is limited to 30 companies returned.  To query the next collection, use the page parameter listed below.  Note: You can use multiple parameters in one query.  So email=joe.example.com&tags=awesome would return all companies that have both the required email and tag.
+
+* `GET /api/v1/companies.xml or .json` returns a collection of companies.
+* `GET /api/v1/companies.xml?page=2` returns the next collection of companies.
+* `GET /api/v1/companies.xml?email=joe.smith@example.com` returns the companies who have the email address listed.  (This is an exact search.  So searching for @gmail won't work. If there is a request for this, file an issue please)
+* `GET /api/v1/companies.xml?tags=awesome` returns the companies who have the tag address listed.
+* `GET /api/v1/companies.xml?name=Batchblue` returns all companies that contain "Batchblue"  Note: This is effectively a LIKE query.
+* `GET /api/v1/companies.xml?updated_since=2012-11-20T11:05:15-05:00` returns all companies who have been updated since the time passed in.
+* `GET /api/v1/companies.xml?updated_before=2012-11-20T11:05:15-05:00` returns all companies who have been updated before the time passed in.
+* `GET /api/v1/companies.xml?state=RI` Useful if you want to query all of the companies who have an address in a particular state.
+
 
 If there is particular search action that would make things easier, please let us know at help@batchblue.com
 

@@ -15,8 +15,19 @@ People
 
 Index
 ----
-* `GET /api/v1/people.xml or .json` returns a collection of people.  Limited to 25
-* `GET /api/v1/people.xml?page=2` returns the next collection of people.  Limited to 25
+Each request is limited to 30 people returned.  To query the next collection, use the page parameter listed below.  Note: You can use multiple parameters in one query.  So email=joe.example.com&tags=awesome would return all people that have both the required email and tag.
+
+* `GET /api/v1/people.xml or .json` returns a collection of people.
+* `GET /api/v1/people.xml?page=2` returns the next collection of people.
+* `GET /api/v1/people.xml?email=joe.smith@example.com` returns the people who have the email address listed.  (This is an exact search.  So searching for @gmail won't work. If there is a request for this, file an issue please)
+* `GET /api/v1/people.xml?tags=awesome` returns the people who have the tag address listed.
+* `GET /api/v1/people.xml?name=Joe` returns all people who have "Joe" in their name. [Joe Smith, Joey Bag'ODonuts]   Note: This is effectively a LIKE query.
+* `GET /api/v1/people.xml?updated_since=2012-11-20T11:05:15-05:00` returns all people who have been updated since the time passed in.
+* `GET /api/v1/people.xml?updated_before=2012-11-20T11:05:15-05:00` returns all people who have been updated before the time passed in.
+* `GET /api/v1/people.xml?state=RI` Useful if you want to query all of the people who have an address in a particular state.
+* `GET /api/v1/people.xml?champion=true` returns a collection of your champions.  You can pass in 'false' to get a listing of people who are not champions.
+* `GET /api/v1/people.xml?company_name=Batchblue` returns a collection of people who are employees of 'Batchblue'
+* `GET /api/v1/people.xml?company_id=35` returns a collection of people who are employees of company with the id 35
 
 If there is particular search action that would make things easier, please let us know at help@batchblue.com
 
