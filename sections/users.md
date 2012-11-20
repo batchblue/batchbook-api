@@ -1,6 +1,11 @@
 Users
 =====
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/users.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/users.md#show)
+
 [XML Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#users-xml)
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#users-json)

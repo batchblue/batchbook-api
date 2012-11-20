@@ -1,14 +1,32 @@
 Companies
 =============
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#show)
+* [Create](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#create)
+* [Update](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#update)
+* [Destroy](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md#destroy-company)
+
+
 [XML Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#company-xml)
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#company-json)
 
 Index
 ----
-* `GET /api/v1/companies.xml or .json` returns a collection of companies.  Limited to 25
-* `GET /api/v1/companies.xml?page=2` returns the next collection of companies.  Limited to 25
+Each request is limited to 30 companies returned.  To query the next collection, use the page parameter listed below.  Note: You can use multiple parameters in one query.  So email=joe.example.com&tags=awesome would return all companies that have both the required email and tag.
+
+* `GET /api/v1/companies.xml or .json` returns a collection of companies.
+* `GET /api/v1/companies.xml?page=2` returns the next collection of companies.
+* `GET /api/v1/companies.xml?email=joe.smith@example.com` returns the companies who have the email address listed.  (This is an exact search.  So searching for @gmail won't work. If there is a request for this, file an issue please)
+* `GET /api/v1/companies.xml?tags=awesome` returns the companies who have the tag address listed.
+* `GET /api/v1/companies.xml?name=Batchblue` returns all companies that contain "Batchblue"  Note: This is effectively a LIKE query.
+* `GET /api/v1/companies.xml?updated_since=2012-11-20T11:05:15-05:00` returns all companies who have been updated since the time passed in.
+* `GET /api/v1/companies.xml?updated_before=2012-11-20T11:05:15-05:00` returns all companies who have been updated before the time passed in.
+* `GET /api/v1/companies.xml?state=RI` Useful if you want to query all of the companies who have an address in a particular state.
+
 
 If there is particular search action that would make things easier, please let us know at help@batchblue.com
 
@@ -72,18 +90,21 @@ Create
     <email>
       <address>bar@example.com</address>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </email>
   </emails>
   <phones type="array">
     <phone>
       <number>1 401 867 5309</number>
       <label>cell</label>
+      <primary type="boolean">true</primary>
     </phone>
   </phones>
   <websites type="array">
     <website>
       <address>http://batchblue.com</address>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </website>
   </websites>
   <addresses type="array">
@@ -95,6 +116,7 @@ Create
       <postal-code>02903</postal-code>
       <country>United States</country>
       <label>work</label>
+      <primary type="boolean">true</primary>
     </address>
   </addresses>
   <tags type="array">
@@ -136,12 +158,14 @@ Create
   "emails":[
     {
       "address":"bar@example.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "phones":[
     {
       "number":"1 401 867 5309",
-      "label":"cell"
+      "label":"cell",
+      "primary": true
     }],
   "addresses":[
     {
@@ -151,12 +175,14 @@ Create
       "state":"RI",
       "postal_code":"02903",
       "country":"United States",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "websites":[
     {
       "address":"http://batchblue.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     }],
   "tags":[
     {
@@ -226,11 +252,13 @@ Works just like create.  For nested objects without an id, it will create the ne
     <email>
       <address>create@example.com</address>
       <label>home</label>
+      <primary type="boolean">true</primary>
     </email>
     <email>
       <id type="integer">1</id>
       <address>update@example.com</address>
       <label>work</label>
+      <primary type="boolean">false</primary>
     </email>
     <email>
       <id type="integer">2</id>
@@ -264,12 +292,14 @@ Works just like create.  For nested objects without an id, it will create the ne
   "emails":[
     {
       "address":"create@example.com",
-      "label":"work"
+      "label":"work",
+      "primary": true
     },
     {
       "id":1,
       "address":"update@example.com",
-      "label":"home"
+      "label":"home",
+      "primary": false
     },
     {
       "id":2,

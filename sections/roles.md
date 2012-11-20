@@ -1,6 +1,11 @@
 Roles
 =====
 
+### Methods
+
+* [Index](https://github.com/batchblue/batchbook-api/blob/master/sections/roles.md#index)
+* [Show](https://github.com/batchblue/batchbook-api/blob/master/sections/roles.md#show)
+
 [XML Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#roles-xml)
 
 [JSON Data Reference](https://github.com/batchblue/batchbook-api/blob/master/sections/data_reference.md#roles-json)
