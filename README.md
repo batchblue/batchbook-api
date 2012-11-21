@@ -10,7 +10,7 @@ Endpoints
 * [Custom Fields](https://github.com/batchblue/batchbook-api/blob/master/sections/custom_fields.md)
 * [Users](https://github.com/batchblue/batchbook-api/blob/master/sections/users.md)
 * [Roles](https://github.com/batchblue/batchbook-api/blob/master/sections/roles.md)
-* [Communications](https://github.com/batchblue/batchbook-api/blob/master/sections/comms.md) 
+* [Communications](https://github.com/batchblue/batchbook-api/blob/master/sections/communications.md) 
 
 Authentication
 --------------

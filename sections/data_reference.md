@@ -263,6 +263,182 @@ Note: Only one primary phone allowed.  If an phone is passed in with primary = t
 }
 ```
 
+Communication XML
+---------
+
+Notes about Communications:
+
+Communication -> date:  #The date the communication was to have happened. So you can log a "chat" that happened last week. It's optional, and will default to the current time if left blank.
+
+Communication -> type: Each account starts with "phone", "email", "chat", "note".  But you can create new types by passing in new strings "Twitter" for example.
+
+Participant Types:  "to", "from", "cc", "bcc"  Note: it's possible to attach a bcc to a communication that is a "chat", but they won't be visible via UI unless you change the type to email.  (I can't think of why anyone would want to do this, but the functionality is there.)
+
+Participant Contact_id:  The person or company id that is the participant.  Required if you want to associate the communication with a contact.  Will be returned as nil if the associated contact was deleted.
+
+Participant Contact_name:  Optional Field.  If this field is not passed in, it will be populated by the contact's display name.  If it is passed in, it will override the name displayed for the participant.  (But not actually update the contact's name).  If the contact_name is set, but the contact_id is nil, it will create the association, but not link to a contact.
+
+Permissions can only be set if the user has the role of advanced, admin or owner.  Basic users are automatically given permissions for any communications that they create.
+Permission -> user_id:  This is the only required parameter, This is the basic user's id that should have permissions.
+Permission -> created_by:  This is the user id of the person who created the permission.  Will default to the user making the api call.  It can be set to another user's id.  It's not recommended to set it, but it can be done.
+
+
+```xml
+<communication>
+    <title>Catching up on old times</title>
+    <body>So I saw that you were back in town.  Was wondering if we can get together and grab a beer.</body>
+    <date type="datetime">2002-11-20T13:10:00-08:00</date>
+    <type>email</type>
+    <created-at type="datetime">2012-11-21T07:26:51-08:00</created-at>
+    <updated-at type="datetime">2012-11-21T07:33:35-08:00</updated-at>
+    <tags type="array">
+      <tag>
+        <name>fun</name>
+      </tag>
+    </tags>
+    <cf-records type="array">
+      ...
+    </cf-records>
+    <permissions type="array">
+        <permission>
+            <user-id type="integer">32</user-id>
+            <user-name>The Basic User</user-name>
+            <created-by type="integer">8</created-by>
+            <created-by-name>Eric Krause</created-by-name>
+        </permission>
+    </permissions>
+    <participants type="array">
+        <participant>
+            <type>from</type>
+            <contact-id type="integer">4</contact-id>
+            <contact-name>Dr. Drew</contact-name>
+        </participant>
+        <participant>
+            <type>to</type>
+            <contact-id type="integer">32</contact-id>
+            <contact-name>Eric Krause</contact-name>
+        </participant>
+    </participants>
+</communication>
+
+```
+
+Communications JSON
+----------
+
+Notes about Communications:
+
+Communication -> date:  #The date the communication was to have happened. So you can log a "chat" that happened last week. It's optional, and will default to the current time if left blank.
+
+Communication -> type: Each account starts with "phone", "email", "chat", "note".  But you can create new types by passing in new strings "Twitter" for example.
+
+Participant Types:  "to", "from", "cc", "bcc"  Note: it's possible to attach a bcc to a communication that is a "chat", but they won't be visible via UI unless you change the type to email.  (I can't think of why anyone would want to do this, but the functionality is there.)
+
+Participant Contact_id:  The person or company id that is the participant.  Required if you want to associate the communication with a contact.  Will be returned as nil if the associated contact was deleted.
+
+Participant Contact_name:  Optional Field.  If this field is not passed in, it will be populated by the contact's display name.  If it is passed in, it will override the name displayed for the participant.  (But not actually update the contact's name).  If the contact_name is set, but the contact_id is nil, it will create the association, but not link to a contact.
+
+Permissions can only be set if the user has the role of advanced, admin or owner.  Basic users are automatically given permissions for any communications that they create.
+Permission -> user_id:  This is the only required parameter, This is the basic user's id that should have permissions.
+Permission -> created_by:  This is the user id of the person who created the permission.  Will default to the user making the api call.  It can be set to another user's id.  It's not recommended to set it, but it can be done.
+
+```json
+{
+  "communication": {
+    "title": "Catching up on old times",
+    "body": "So I saw that you were back in town.  Was wondering if we can get together and grab a beer.",
+    "date": "2002-11-20T13:10:37-08:00",
+    "type": "email",
+    "created_at": "2012-11-21T07:26:51-08:00",
+    "updated_at": "2012-11-21T07:26:51-08:00",
+    "tags":[
+    {
+      "name":"beer"
+    }],
+    "cf_records":[
+    {
+      "custom_field_set_id":46,
+      "custom_field_values":[
+      {
+        "custom_field_definition_id":198,
+        "text_value":"short"
+      },
+      {
+        "custom_field_definition_id":199,
+        "text_value":"long"
+      }]
+    }],
+    "permissions": [
+      {
+        "user_id": 32,
+        "user_name": "The Basic User",
+        "created_by": 8,
+        "created_by_name": "Eric Krause"
+      }
+    ],
+    "participants": [
+      {
+          "type": "from",
+          "contact_id": 4,
+          "contact_name": "Dr. Drew"
+      },
+      {
+          "type": "to",
+          "contact_id": 32,
+          "contact_name": "Eric Krause"
+      }
+    ]
+  }
+}
+```
+
+Permissions XML
+-----------
+Permissions can only be set if the user has the role of advanced, admin or owner.  Basic users are automatically given permissions for any records that they create.
+
+user_id:  This is the only required parameter, This is the basic user's id that should have permissions.
+
+created_by:  This is the user id of the person who created the permission.  Will default to the user making the api call.  It can be set to another user's id.  It's not recommended to set it, but it can be done.
+
+user_name and created_name are just used to ease the displaying of permissions should you need to display the names.  Fields are read only
+
+
+```xml
+<permissions type="array">
+    <permission>
+        <user-id type="integer">32</user-id>
+        <user-name>The Basic User</user-name>
+        <created-by type="integer">8</created-by>
+        <created-by-name>Eric Krause</created-by-name>
+    </permission>
+</permissions>
+```
+
+Permissions JSON
+----------
+Permissions can only be set if the user has the role of advanced, admin or owner.  Basic users are automatically given permissions for any records that they create.
+
+user_id:  This is the only required parameter, This is the basic user's id that should have permissions.
+
+created_by:  This is the user id of the person who created the permission.  Will default to the user making the api call.  It can be set to another user's id.  It's not recommended to set it, but it can be done.
+
+user_name and created_name are just used to ease the displaying of permissions should you need to display the names.  Fields are read only
+
+```json
+{
+  "permissions": [
+    {
+      "user_id": 32,
+      "user_name": "The Basic User",
+      "created_by": 8,
+      "created_by_name": "Eric Krause"
+    }
+  ]
+}
+```
+
+
+
 Custom Field Set XML
 ---------
 ``` xml

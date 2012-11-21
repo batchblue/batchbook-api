@@ -219,6 +219,7 @@ Create
 
 ```xml
 <company>
+  <id type="integer">the_new_id</id>
   ...
 </company>
 ```
