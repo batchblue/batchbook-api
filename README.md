@@ -1,4 +1,4 @@
-xBatchbook API
+Batchbook API
 =============
 
 The BB2 API is a RESTful interface for accessing and modifying your account.It supports both XML and JSON and a ruby library will be provided to help build client functionality.  The API is currently under construction and the following is only a subset of what will eventually be available. Please submit an issue (or contact Batchbook) with specific questions that you do not see addressed here.
