@@ -20,7 +20,11 @@ Each request is limited to 30 companies returned.  To query the next collection,
 
 * `GET /api/v1/companies.xml or .json` returns a collection of companies.
 * `GET /api/v1/companies.xml?page=2` returns the next collection of companies.
-* `GET /api/v1/companies.xml?email=joe.smith@example.com` returns the companies who have the email address listed.  (This is an exact search.  So searching for @gmail won't work. If there is a request for this, file an issue please)
+* `GET /api/v1/companies.xml?exact_email=info@example.com` returns the
+  companies who have the email address info@example.com.
+
+Other Queries:
+
 * `GET /api/v1/companies.xml?tags=awesome` returns the companies who have the tag address listed.
 * `GET /api/v1/companies.xml?name=Batchblue` returns all companies that contain "Batchblue"  Note: This is effectively a LIKE query.
 * `GET /api/v1/companies.xml?updated_since=2012-11-20T11:05:15-05:00` returns all companies who have been updated since the time passed in.

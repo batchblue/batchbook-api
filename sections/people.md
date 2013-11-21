@@ -19,9 +19,13 @@ Each request is limited to 30 people returned.  To query the next collection, us
 
 * `GET /api/v1/people.xml or .json` returns a collection of people.
 * `GET /api/v1/people.xml?page=2` returns the next collection of people.
-* `GET /api/v1/people.xml?email=joe.smith@example.com` returns the people who have the email address listed.  (This is an exact search.  So searching for @gmail won't work. If there is a request for this, file an issue please)
+* `GET /api/v1/people.xml?exact_email=joe.smith@example.com` returns
+  anyone with the exact email joe.smith@example.com. 
+
+Other queries:
+
 * `GET /api/v1/people.xml?tags=awesome` returns the people who have the tag address listed.
-* `GET /api/v1/people.xml?name=Joe` returns all people who have "Joe" in their name. [Joe Smith, Joey Bag'ODonuts]   Note: This is effectively a LIKE query.
+* `GET /api/v1/people.xml?name=Joe` returns all people who have "Joe" in their name. [Joe Smith, Joey Bag'ODonuts]   
 * `GET /api/v1/people.xml?updated_since=2012-11-20T11:05:15-05:00` returns all people who have been updated since the time passed in.
 * `GET /api/v1/people.xml?updated_before=2012-11-20T11:05:15-05:00` returns all people who have been updated before the time passed in.
 * `GET /api/v1/people.xml?state=RI` Useful if you want to query all of the people who have an address in a particular state.
