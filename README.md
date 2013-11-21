@@ -1,4 +1,3 @@
-bb
 Batchbook API
 =============
 
