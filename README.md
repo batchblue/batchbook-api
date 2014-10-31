@@ -18,11 +18,6 @@ Authentication at launch will be using token authentication.  The api_key for th
 
 There has been some work done on implementing oauth2 but it isn't complete at launch.  If you feel this would make things easier for your integration please let us know.
 
-Api Wrappers
-------------
-* [Ruby wrapper by batchblue](https://github.com/batchblue/batchbook)
-
-
 Api Test Account
 ----------------
 
