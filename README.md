@@ -1,16 +1,18 @@
 Batchbook API
 =============
 
-The BB2 API is a RESTful interface for accessing and modifying your account.It supports both XML and JSON and a ruby library will be provided to help build client functionality.  
+The BB2 API is a RESTful interface for accessing and modifying your account.It supports both XML and JSON and a ruby library will be provided to help build client functionality.
 
 Endpoints
 ---------
 * [People](https://github.com/batchblue/batchbook-api/blob/master/sections/people.md)
 * [Companies](https://github.com/batchblue/batchbook-api/blob/master/sections/companies.md)
 * [Custom Fields](https://github.com/batchblue/batchbook-api/blob/master/sections/custom_fields.md)
+* [Affiliations](https://github.com/batchblue/batchbook-api/blob/master/sections/affiliations.md)
+* [Affiliation Types](https://github.com/batchblue/batchbook-api/blob/master/sections/affiliation_types.md)
 * [Users](https://github.com/batchblue/batchbook-api/blob/master/sections/users.md)
 * [Roles](https://github.com/batchblue/batchbook-api/blob/master/sections/roles.md)
-* [Communications](https://github.com/batchblue/batchbook-api/blob/master/sections/communications.md) 
+* [Communications](https://github.com/batchblue/batchbook-api/blob/master/sections/communications.md)
 
 Authentication
 --------------

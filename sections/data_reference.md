@@ -977,3 +977,54 @@ Communication JSON
 }
 ```
 
+Affiliation Type XML
+----
+``` xml
+<affiliation-type>
+  <id type="integer">8</id>
+  <name>Parent</name>
+  <reciprocal-name>Child</reciprocal-name>
+</affiliation>
+```
+
+Affiliation Type JSON
+----
+
+``` json
+{
+  "affiliation_type": {
+    "id":8,
+    "name":"Parent",
+    "reciprocal_name":"Child"
+  }
+}
+```
+
+Affiliation XML
+----
+``` xml
+<affiliation>
+  <id type="integer">8</id>
+  <affiliate-id type="integer">1035</affiliate-id>
+  <affiliate-type>Contact</affiliate-type>
+  <affiliator-id type="integer">1044</affiliator-id>
+  <affiliator-type>Contact</affiliator-type>
+  <affiliation-type-id type="integer">7</affiliation-type-id>
+</affiliation>
+```
+
+Affiliation JSON
+----
+
+``` json
+{
+  "affiliation": {
+    "id":8,
+    "affiliate_id":1035,
+    "affiliate_type":"Contact",
+    "affiliator_id":1044,
+    "affiliator_type":"Contact",
+    "affiliation_type_id":7
+  }
+}
+```
